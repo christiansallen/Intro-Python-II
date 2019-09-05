@@ -91,6 +91,8 @@ while i is not 'q':
                     index = newPlayer.inventory.index(weapon)
                     newPlayer.current_room.items.append(
                         newPlayer.inventory.pop(index))
+                    print(f'{colors.PURPLE}You dropped the {weapon.name}!')
+
                     print(
                         f'{colors.RED}**Available Items: {[item.name for item in newPlayer.current_room.items]}{colors.END}')
                     print(
@@ -113,6 +115,8 @@ while i is not 'q':
                     index = newPlayer.current_room.items.index(item)
                     newPlayer.inventory.append(
                         newPlayer.current_room.items.pop(index))
+
+                    print(f'{colors.PURPLE}You took the {item.name}!')
                     print(
                         f'{colors.RED}**Available Items: {[item.name for item in newPlayer.current_room.items]}{colors.END}')
                     print(
